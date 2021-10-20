@@ -23,6 +23,7 @@ import { HeaderComponent } from './views/components/template/header/header.compo
 import { FooterComponent } from './views/components/template/footer/footer.component';
 import { NavComponent } from './views/components/template/nav/nav.component';
 import { HomeComponent } from './views/components/home/home.component';
+import { TechnicianReadComponent } from './views/components/technician/technician-read/technician-read.component';
 
 
 
@@ -32,7 +33,8 @@ import { HomeComponent } from './views/components/home/home.component';
     HeaderComponent,
     FooterComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    TechnicianReadComponent
   ],
   imports: [
     BrowserModule,
