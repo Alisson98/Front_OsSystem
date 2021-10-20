@@ -1,6 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './views/components/home/home.component';
+import { TechnicianCreateComponent } from './views/components/technician/technician-create/technician-create.component';
 import { TechnicianReadComponent } from './views/components/technician/technician-read/technician-read.component';
 
 const routes: Routes = [
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'technical',
     component: TechnicianReadComponent
+  },
+  {
+    path: 'technical/create',
+    component: TechnicianCreateComponent
   }
 ];
 

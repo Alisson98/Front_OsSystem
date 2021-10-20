@@ -24,6 +24,7 @@ import { FooterComponent } from './views/components/template/footer/footer.compo
 import { NavComponent } from './views/components/template/nav/nav.component';
 import { HomeComponent } from './views/components/home/home.component';
 import { TechnicianReadComponent } from './views/components/technician/technician-read/technician-read.component';
+import { TechnicianCreateComponent } from './views/components/technician/technician-create/technician-create.component';
 
 
 
@@ -34,7 +35,8 @@ import { TechnicianReadComponent } from './views/components/technician/technicia
     FooterComponent,
     NavComponent,
     HomeComponent,
-    TechnicianReadComponent
+    TechnicianReadComponent,
+    TechnicianCreateComponent
   ],
   imports: [
     BrowserModule,
