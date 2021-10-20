@@ -22,9 +22,19 @@ export class TechnicianService {
     return this.http.get<Technician[]>(url);
   }
 
+  findById(id: any):Observable<Technician>{
+    const url = `${this.baseUrl}/technician/${id}`;
+    return this.http.get<Technician>(url);
+  }
+
   create(technician: Technician): Observable<Technician> {
     const url = this.baseUrl + "/technician";
     return this.http.post<Technician>(url, technician);
+  }
+
+  update(technician: Technician):Observable<Technician> {
+    const url = `${this.baseUrl}/technician/${technician.id}`;
+    return this.http.put<Technician>(url, technician);
   }
 
   message(msg: String): void {

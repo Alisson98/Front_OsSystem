@@ -25,6 +25,7 @@ import { NavComponent } from './views/components/template/nav/nav.component';
 import { HomeComponent } from './views/components/home/home.component';
 import { TechnicianReadComponent } from './views/components/technician/technician-read/technician-read.component';
 import { TechnicianCreateComponent } from './views/components/technician/technician-create/technician-create.component';
+import { TechnicianUpdateComponent } from './views/components/technician/technician-update/technician-update.component';
 
 
 
@@ -36,7 +37,8 @@ import { TechnicianCreateComponent } from './views/components/technician/technic
     NavComponent,
     HomeComponent,
     TechnicianReadComponent,
-    TechnicianCreateComponent
+    TechnicianCreateComponent,
+    TechnicianUpdateComponent
   ],
   imports: [
     BrowserModule,
