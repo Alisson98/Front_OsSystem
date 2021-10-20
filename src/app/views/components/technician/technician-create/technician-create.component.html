@@ -2,19 +2,22 @@
     <h1>Creating a new technician</h1>
     <mat-form-field class="full-width" appearance="fill">
         <mat-label>Name</mat-label>
-        <input matInput placeholder="Ex. José da Silva">
+        <input [(ngModel)]="technician.name" [formControl]="name" required name="name" maxlength="50" matInput placeholder="Ex. José da Silva">
+        <mat-error *ngIf="name.invalid">{{ errorValidName() }}</mat-error>
     </mat-form-field>
 
     <mat-form-field class="full-width" appearance="fill">
         <mat-label>CPF</mat-label>
-        <input matInput placeholder="000.000.000-00">
+        <input [(ngModel)]="technician.cpf" [formControl]="cpf" required name="cpf" maxlength="15" matInput placeholder="000.000.000-00">
+        <mat-error *ngIf="cpf.invalid">{{ errorValidCPF() }}</mat-error>
     </mat-form-field>
 
     <mat-form-field class="full-width" appearance="fill">
         <mat-label>phone</mat-label>
-        <input matInput placeholder="Ex. (99) 99999-9999">
+        <input [(ngModel)]="technician.phone" [formControl]="phone" required name="phone" maxlength="18" matInput placeholder="Ex. (99) 99999-9999">
+        <mat-error *ngIf="phone.invalid">{{ errorValidPhone() }}</mat-error>
     </mat-form-field>
-    <button (click)="create()" mat-stroked-button color="accent">Create</button>
+    <button (click)="create()" [disabled]="errorValidName() || errorValidPhone() || errorValidCPF()" mat-stroked-button color="accent">Create</button>
     <button (click)="cancel()" mat-stroked-button color="warn">Cancel</button>
 
 </form>
