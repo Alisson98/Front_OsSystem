@@ -28,3 +28,8 @@ table {
 #edit {
     color: #69f0ae;
 }
+
+#delete {
+    color: red;
+    margin-left: .5rem;
+}

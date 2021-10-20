@@ -37,6 +37,11 @@ export class TechnicianService {
     return this.http.put<Technician>(url, technician);
   }
 
+  delete(id: any):Observable<void> {
+    const url = `${this.baseUrl}/technician/${id}`;
+    return this.http.delete<void>(url);
+  }
+
   message(msg: String): void {
     this.snack.open(`${msg}`, 'ok', {
       horizontalPosition: 'end',

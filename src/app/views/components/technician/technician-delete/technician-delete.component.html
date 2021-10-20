@@ -1,0 +1,20 @@
+<form class="form mat-elecation-z8">
+    <h1>Deleting technician</h1>
+    <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Name</mat-label>
+        <input [(ngModel)]="technician.name" name="name" disabled maxlength="50" matInput placeholder="Ex. José da Silva">
+    </mat-form-field>
+
+    <mat-form-field class="full-width" appearance="fill">
+        <mat-label>CPF</mat-label>
+        <input [(ngModel)]="technician.cpf" name="cpf" disabled maxlength="15" matInput placeholder="000.000.000-00">
+    </mat-form-field>
+
+    <mat-form-field class="full-width" appearance="fill">
+        <mat-label>phone</mat-label>
+        <input [(ngModel)]="technician.phone" name="phone" disabled maxlength="18" matInput placeholder="Ex. (99) 99999-9999">
+    </mat-form-field>
+    <button class="mat-elecation-z8" (click)="delete()" mat-stroked-button color="warn">Delete</button>
+    <button class="mat-elecation-z8" (click)="cancel()" mat-stroked-button color="accent">Cancel</button>
+
+</form>
