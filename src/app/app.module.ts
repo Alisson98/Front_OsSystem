@@ -32,6 +32,8 @@ import { ClientCreateComponent } from './views/components/client/client-create/c
 import { ClientUpdateComponent } from './views/components/client/client-update/client-update.component';
 import { ClientDeleteComponent } from './views/components/client/client-delete/client-delete.component';
 import { OsReadComponent } from './views/components/os/os-read/os-read.component';
+import { OsCreateComponent } from './views/components/os/os-create/os-create.component';
+import { OsUpdateComponent } from './views/components/os/os-update/os-update.component';
 
 
 
@@ -50,7 +52,9 @@ import { OsReadComponent } from './views/components/os/os-read/os-read.component
     ClientCreateComponent,
     ClientUpdateComponent,
     ClientDeleteComponent,
-    OsReadComponent
+    OsReadComponent,
+    OsCreateComponent,
+    OsUpdateComponent
   ],
   imports: [
     BrowserModule,

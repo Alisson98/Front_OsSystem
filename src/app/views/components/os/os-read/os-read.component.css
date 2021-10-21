@@ -33,3 +33,15 @@ table {
     color: blue;
     margin-left: .5rem;
 }
+
+td.low {
+    color: rgb(2, 94, 2);
+}
+
+td.medium {
+    color: rgb(233, 233, 14)
+}
+
+td.high {
+    color: red;
+}

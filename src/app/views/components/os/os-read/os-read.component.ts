@@ -58,4 +58,17 @@ export class OsReadComponent implements AfterViewInit {
       })
     })
   }
+
+  priority(x: any) {
+    if(x == 'LOW'){
+      return 'low'
+    }
+    else if(x == 'MEDIUM'){
+      return 'medium'
+    }
+    else {
+      return 'high'
+    }
+  }
+ 
 }
