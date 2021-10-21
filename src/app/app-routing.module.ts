@@ -61,7 +61,7 @@ const routes: Routes = [
   {
     path: 'os/update/:id',
     component: OsUpdateComponent
-  },
+  }
 ];
 
 @NgModule({
