@@ -5,6 +5,7 @@ import { ClientDeleteComponent } from './views/components/client/client-delete/c
 import { ClientReadComponent } from './views/components/client/client-read/client-read.component';
 import { ClientUpdateComponent } from './views/components/client/client-update/client-update.component';
 import { HomeComponent } from './views/components/home/home.component';
+import { OsReadComponent } from './views/components/os/os-read/os-read.component';
 import { TechnicianCreateComponent } from './views/components/technician/technician-create/technician-create.component';
 import { TechnicianDeleteComponent } from './views/components/technician/technician-delete/technician-delete.component';
 import { TechnicianReadComponent } from './views/components/technician/technician-read/technician-read.component';
@@ -46,7 +47,11 @@ const routes: Routes = [
   {
     path: 'customers/delete/:id',
     component: ClientDeleteComponent
-  }
+  },
+  {
+    path: 'os',
+    component: OsReadComponent
+  },
 ];
 
 @NgModule({
