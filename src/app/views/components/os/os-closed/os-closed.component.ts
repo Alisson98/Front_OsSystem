@@ -8,15 +8,15 @@ import { OsService } from 'src/app/services/os.service';
 import { TechnicianService } from 'src/app/services/technician.service';
 
 @Component({
-  selector: 'app-os-read',
-  templateUrl: './os-read.component.html',
-  styleUrls: ['./os-read.component.css']
+  selector: 'app-os-closed',
+  templateUrl: './os-closed.component.html',
+  styleUrls: ['./os-closed.component.css']
 })
-export class OsReadComponent implements AfterViewInit {
+export class OsClosedComponent implements AfterViewInit {
 
   osList: OS[] = [];
 
-  displayedColumns: string[] = ['client', 'technician', 'openDate','priority', 'status','action'];
+  displayedColumns: string[] = ['client', 'technician', 'openDate', 'closingDate', 'priority', 'status','action'];
   dataSource = new MatTableDataSource<OS>(this.osList);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -34,7 +34,7 @@ export class OsReadComponent implements AfterViewInit {
   findAll(): void {
     this.service.findAll().subscribe((response) => {
       response.forEach(x =>{
-        if(x.status != "CLOSED"){
+        if(x.status == "CLOSED"){
           this.osList.push(x);
         }
       })
@@ -45,9 +45,6 @@ export class OsReadComponent implements AfterViewInit {
     })
   }
 
-  navigateToCreate(): void {
-    this.router.navigate(['os/create'])
-  }
   findAllTechnician():void {
     this.osList.forEach(x => {
       this.technicianService.findById(x.technician).subscribe(response =>{
