@@ -21,4 +21,17 @@ export class ClientService {
     const url = this.baseUrl + "/client";
     return this.http.get<Client[]>(url);
   }
+
+  create(client: Client): Observable<Client> {
+    const url = this.baseUrl + "/client";
+    return this.http.post<Client>(url, client);
+  }
+
+  message(msg: String): void {
+    this.snack.open(`${msg}`, 'ok', {
+      horizontalPosition: 'end',
+      verticalPosition: 'top',
+      duration: 5000
+    })
+  }
 }
