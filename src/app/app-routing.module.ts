@@ -8,6 +8,7 @@ import { HomeComponent } from './views/components/home/home.component';
 import { OsCreateComponent } from './views/components/os/os-create/os-create.component';
 import { OsReadComponent } from './views/components/os/os-read/os-read.component';
 import { OsUpdateComponent } from './views/components/os/os-update/os-update.component';
+import { OsViewComponent } from './views/components/os/os-view/os-view.component';
 import { TechnicianCreateComponent } from './views/components/technician/technician-create/technician-create.component';
 import { TechnicianDeleteComponent } from './views/components/technician/technician-delete/technician-delete.component';
 import { TechnicianReadComponent } from './views/components/technician/technician-read/technician-read.component';
@@ -61,6 +62,10 @@ const routes: Routes = [
   {
     path: 'os/update/:id',
     component: OsUpdateComponent
+  },
+  {
+    path: 'os/view/:id',
+    component: OsViewComponent
   }
 ];
 
