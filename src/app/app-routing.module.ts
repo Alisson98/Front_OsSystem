@@ -2,6 +2,7 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ClientCreateComponent } from './views/components/client/client-create/client-create.component';
 import { ClientReadComponent } from './views/components/client/client-read/client-read.component';
+import { ClientUpdateComponent } from './views/components/client/client-update/client-update.component';
 import { HomeComponent } from './views/components/home/home.component';
 import { TechnicianCreateComponent } from './views/components/technician/technician-create/technician-create.component';
 import { TechnicianDeleteComponent } from './views/components/technician/technician-delete/technician-delete.component';
@@ -36,7 +37,11 @@ const routes: Routes = [
   {
     path: 'customers/create',
     component: ClientCreateComponent
-  }
+  },
+  {
+    path: 'customers/update/:id',
+    component: ClientUpdateComponent
+  },
 ];
 
 @NgModule({
