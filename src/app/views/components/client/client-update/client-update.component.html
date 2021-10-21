@@ -17,7 +17,7 @@
         <input [(ngModel)]="client.phone" [formControl]="phone" required name="phone" maxlength="18" matInput placeholder="Ex. (99) 99999-9999">
         <mat-error *ngIf="phone.invalid">{{ errorValidPhone() }}</mat-error>
     </mat-form-field>
-    <button class="mat-elecation-z8" (click)="update()" [disabled]="errorValidName() || errorValidPhone() || errorValidCPF()" mat-stroked-button color="accent">Create</button>
+    <button class="mat-elecation-z8" (click)="update()" [disabled]="errorValidName() || errorValidPhone() || errorValidCPF()" mat-stroked-button color="accent">Update</button>
     <button class="mat-elecation-z8" (click)="cancel()" mat-stroked-button color="warn">Cancel</button>
 
 </form>

@@ -23,8 +23,6 @@ export class ClientUpdateComponent implements OnInit {
   name = new FormControl('', [Validators.minLength(5)])
   cpf = new FormControl('', [Validators.minLength(11)])
   phone = new FormControl('', [Validators.minLength(11)])
-
-
   constructor(
     private router: Router,
     private service: ClientService,
@@ -46,7 +44,7 @@ export class ClientUpdateComponent implements OnInit {
   update(): void {
     this.service.update(this.client).subscribe((response) => {
       this.router.navigate(['customers'])
-      this.service.message('Client Created!')
+      this.service.message('Client Updated!')
     }, err => {
       console.log(err)
       if (err.error.error.match('CPF is already in use!')) {

@@ -30,6 +30,7 @@ import { TechnicianDeleteComponent } from './views/components/technician/technic
 import { ClientReadComponent } from './views/components/client/client-read/client-read.component';
 import { ClientCreateComponent } from './views/components/client/client-create/client-create.component';
 import { ClientUpdateComponent } from './views/components/client/client-update/client-update.component';
+import { ClientDeleteComponent } from './views/components/client/client-delete/client-delete.component';
 
 
 
@@ -46,7 +47,8 @@ import { ClientUpdateComponent } from './views/components/client/client-update/c
     TechnicianDeleteComponent,
     ClientReadComponent,
     ClientCreateComponent,
-    ClientUpdateComponent
+    ClientUpdateComponent,
+    ClientDeleteComponent
   ],
   imports: [
     BrowserModule,
